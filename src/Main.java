@@ -4,8 +4,26 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String name = JOptionPane.showInputDialog("Enter your name");
-        JOptionPane.showMessageDialog(null, "Your name is " + name);
+        Counter c1 = new Counter();
+        Counter c2 = new Counter();
+        c1.getInstanceCount();
+        Counter.getCount();
+    }
+}
+
+class Counter {
+    private static int count = 0;
+    private int instanceCount = 0;
+
+    public Counter() {
+        count++;
+        instanceCount++;
+    }
+    public int getInstanceCount() {
+        return instanceCount;
+    }
+    public static int getCount() {
+        return count;
     }
 }
 
