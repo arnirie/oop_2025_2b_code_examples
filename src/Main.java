@@ -4,10 +4,31 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Counter c1 = new Counter();
-        Counter c2 = new Counter();
-        c1.getInstanceCount();
-        Counter.getCount();
+        //input series of double-store array
+        Scanner sc = new Scanner(System.in);
+        double[] numbers = new double[999];
+        int counter = 0;
+        double sum = 0;
+        for(;;){
+            double input = sc.nextDouble();
+            numbers[counter++] = input;
+            sum += input;
+            if((int)input % 2 == 0) break;
+        }
+        //display reverse
+        for(int i = counter -1 ; i >= 0 ; i--){
+            System.out.println(numbers[i]);
+        }
+        //display cast
+        for(int i = 0 ; i < counter ; i++){
+            System.out.println((int)numbers[i]);
+        }
+        //ave, display above
+        double ave = sum / counter;
+        for(int i = 0 ; i < counter ; i++){
+            if(numbers[i] > ave)
+                System.out.println(numbers[i]);
+        }
     }
 }
 
