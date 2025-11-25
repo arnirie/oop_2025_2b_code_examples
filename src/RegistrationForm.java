@@ -1,7 +1,7 @@
 import javax.swing.*;
 
 public class RegistrationForm {
-    private static JPanel pnlMain;
+    private JPanel pnlMain;
     private JPanel pnlCenter;
     private JPanel pnlFooter;
     private JButton btnSubmit;
@@ -10,11 +10,11 @@ public class RegistrationForm {
     private JTextField textField2;
     private JTextField textField3;
 
-    public static void main(String[] args) {
-        JFrame jframe = new JFrame();
-        jframe.setContentPane(pnlMain);
-        jframe.pack();
-        jframe.setVisible(true);
-    }
+//    public static void main(String[] args) {
+//        JFrame jframe = new JFrame();
+//        jframe.setContentPane(pnlMain);
+//        jframe.pack();
+//        jframe.setVisible(true);
+//    }
 
 }
